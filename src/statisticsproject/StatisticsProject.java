@@ -8,7 +8,7 @@ import javax.swing.JOptionPane;
  */
 public class StatisticsProject {
 
-    static int MAX = 5;
+    private static int MAX = 5;
 
     @SuppressWarnings("UnusedAssignment")
     static int elijeOpcion() {
@@ -90,14 +90,15 @@ public class StatisticsProject {
 
     @SuppressWarnings("UnusedAssignment")
     public static void main(String[] args) {
-        int opcion = 0, retro = 0;
-        int numero[] = new int[MAX];
-        int frecuencia[] = new int[MAX];
-        String cadena;
+        int retro = 0;
         do {
-            retro = 0;
+            MAX = Integer.parseInt(JOptionPane.showInputDialog("Ingresa el número de elementos"));
+            int opcion = 0;
+            int numero[] = new int[MAX];
+            int frecuencia[] = new int[MAX];
+            String cadena;
             for (int i = 0; i < numero.length; i++) {
-                cadena = JOptionPane.showInputDialog("Igrese numero " + (i + 1) + " :");
+                cadena = JOptionPane.showInputDialog("Ingrese numero " + (i + 1) + " :");
                 numero[i] = Integer.parseInt(cadena);
                 cadena = JOptionPane.showInputDialog("Igrese su frecuencia : ");
                 frecuencia[i] = Integer.parseInt(cadena);
